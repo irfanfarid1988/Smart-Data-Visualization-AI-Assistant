@@ -1,0 +1,27 @@
+show the pie chart in which display the total employee department wise
+
+show the bar chart of order's status like shipped,processing etc
+
+How many warehouses do I have? Also, tell me the location of warehouses. 
+
+Draw the bar char that How many products are in Warehouse 1 and 2
+
+How many products are in Warehouse 1
+
+How many employees are in the logistics department with 58k + salary.Also tell me how when these employees were hired.
+
+The names of all the products that are in stock.Their pricesWhen were these prices last updated.Who ordered all these products
+
+All vehicles that are currently in mantaince
+
+All vehicles that are currently under mantaince
+
+All vehicles that ahve mantaince costs more then 300
+
+All warehouses with a capacity of more then 10k
+
+All warehouses that are active of type General who are at less then max capacity of products.
+
+show me all emplyees and count of all departments and transactions
+
+how many employees work in logistics department and how many employees work in Operations department 

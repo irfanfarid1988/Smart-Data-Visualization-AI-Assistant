@@ -1,0 +1,83 @@
+﻿@model SDVA.Models.LoginModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link id="light" href="~/Content/Site.css" rel="stylesheet" />
+    <link id="dark" href="~/Content/Site-Dark.css" rel="stylesheet" />
+
+
+    @*@Styles.Render("~/Content/css")*@
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+
+</head>
+<body>
+    <div>
+        <div class="container d-flex justify-content-center align-items-center vh-100">
+            <div class="card" style="max-width: 300px; min-height: 350px; margin-top:100px;  margin-left: auto; margin-right: auto; padding: 15px; border: solid; border-color: lightgrey; ">
+                <div class="card-header">
+                    <h3 class="text-center">Login</h3>
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm("Login", "Account", FormMethod.Post))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.UserEmail)
+                            @Html.TextBoxFor(m => m.UserEmail, new { @class = "form-control" })
+                        </div>
+
+                        <div class="form-group">
+                            @Html.LabelFor(m => m.Password)
+                            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block">Login</button>
+                        // Display the error message if any
+
+                        if(!string.IsNullOrEmpty(ViewBag.ErrorMessage))
+                        {
+                            <div class="alert alert-danger" role="alert"style="margin-top: 10px; white-space: pre-line;" >
+                                @ViewBag.ErrorMessage.ToString().Trim()
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+
+    </div>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script>
+            $(document).ready(function () {
+                try {
+                    debugger;
+                    if (localStorage.getItem("theme") != "true")
+                        $("#dark").remove();
+                } catch {
+                    $("#dark").remove();
+                }
+                // Attach a change event handler to the checkbox
+
+            });
+</script>
+</body>
+</html>
+
+
+
+
+
