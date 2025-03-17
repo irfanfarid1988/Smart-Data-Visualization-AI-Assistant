@@ -187,8 +187,8 @@ namespace SDVA.Controllers
 
                 strFinalPrompt = SQLPrompt + UserInputQuery;
 
-                OpenAIAPI api = new OpenAIAPI("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");
-                var Auth = new APIAuthentication("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");
+                OpenAIAPI api = new OpenAIAPI(OpenAI_API_Key);
+                var Auth = new APIAuthentication(OpenAI_API_Key);
                 var openAiApi = new OpenAIAPI(Auth);
                 var completionRequest = new OpenAI_API.Completions.CompletionRequest
                 {

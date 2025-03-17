@@ -14,9 +14,9 @@ namespace SDVA
     #region Sql Native Client Data Class    
     public class SqlDatabase
     {
-        private const string ServerName = "(local)";
-        private const string SAPassword = "";
-        private const string DatabaseName = "SDVA";
+        //private const string ServerName = "(local)";
+        //private const string SAPassword = "";
+        //private const string DatabaseName = "SDVA";
 
         //private const string DefaultConnection = "Data Source="+ServerName+";Initial Catalog="+DatabaseName+";User ID=SA;Password="+SAPassword+";TrustServerCertificate=true;";
         private const string DefaultConnection = "Data Source="+ServerName+ ";Initial Catalog=" + DatabaseName + ";Integrated Security=True;TrustServerCertificate=true;";
