@@ -23,7 +23,7 @@ namespace SDVA.Controllers
 {
     public class ChatController : Controller
     {
-        private string OpenAI_API_Key = "Your OpenAI Key ";
+        private string OpenAI_API_Key = "";
 
         public ActionResult Chat()
         {

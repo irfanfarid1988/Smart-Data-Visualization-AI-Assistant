@@ -15,7 +15,7 @@ namespace SDVA
     public class SqlDatabase
     {
         private const string ServerName = "(local)";
-        private const string SAPassword = "SQL Server SA User Password here";
+        private const string SAPassword = "";
         private const string DatabaseName = "SDVA";
 
         //private const string DefaultConnection = "Data Source="+ServerName+";Initial Catalog="+DatabaseName+";User ID=SA;Password="+SAPassword+";TrustServerCertificate=true;";
